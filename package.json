@@ -1,7 +1,7 @@
 {
-  "name": "sk-auth",
-  "version": "0.4.1",
-  "description": "Authentication library for use with SvelteKit featuring built-in OAuth providers and zero restriction customization!",
+  "name": "sveltekit-oauth",
+  "version": "0.1.0",
+  "description": "SvelteKit authentication library with built-in OAuth providers and unrestricted customization.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -38,10 +38,12 @@
     "sveltekit",
     "sveltekitauth"
   ],
-  "author": "RaviAnand Mohabir <moravrav@gmail.com> (https://ravianand.web.app)",
-  "repository": "https://github.com/Dan6erbond/svelte-kit-auth.git",
+  "authors": [
+    "VHS <vhsdev@tutanota.como> (https://vhs.codeberg.page)",
+    "RaviAnand Mohabir <moravrav@gmail.com> (https://ravianand.web.app)"
+  ],
+  "repository": "https://github.com/vhsdev/sveltekit-oauth.git",
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "cookie": "^0.4.1",
     "jsonwebtoken": "^8.5.1"

@@ -15,6 +15,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: yarn install --frozen-lockfile && yarn lint
-      - run: yarn install --frozen-lockfile && yarn lint
+      - run: pnpm install --frozen-lockfile && pnpm lint
+      - run: pnpm install --frozen-lockfile && pnpm lint
         working-directory: app

@@ -2,3 +2,4 @@ dist/
 node_modules/
 README.md
 app/
+pnpm-lock.yaml

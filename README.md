@@ -14,13 +14,13 @@ Authentication library for use with SvelteKit featuring built-in OAuth providers
 SvelteKitAuth is available on NPM as `sk-auth`, it can be installed with NPM:
 
 ```bash
-npm i sk-auth --save
+npm install -D sk-auth
 ```
 
-Or Yarn:
+Or PNPM:
 
 ```bash
-yarn add sk-auth
+pnpm add -D sk-auth
 ```
 
 ### Usage with Typescript
