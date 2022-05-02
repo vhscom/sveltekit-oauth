@@ -1,5 +1,5 @@
-import type { EndpointOutput } from "@sveltejs/kit/types/endpoint";
-import { RequestEvent } from "@sveltejs/kit/types/hooks";
+import { RequestHandlerOutput } from "@sveltejs/kit";
+import { RequestEvent } from "@sveltejs/kit/types/private";
 import type { Auth } from "../auth";
 import type { CallbackResult } from "../types";
 import { Provider, ProviderConfig } from "./base";
@@ -33,7 +33,7 @@ export abstract class OAuth2BaseProvider<
   abstract getTokens(code: string, redirectUri: string): TokensType | Promise<TokensType>;
   abstract getUserProfile(tokens: any): ProfileType | Promise<ProfileType>;
 
-  async signin(event: RequestEvent, auth: Auth): Promise<EndpointOutput> {
+  async signin(event: RequestEvent, auth: Auth): Promise<RequestHandlerOutput> {
     const { method } = event.request;
     const { url } = event;
     const state = [

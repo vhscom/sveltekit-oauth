@@ -85,7 +85,7 @@ You can implement your own using the `Provider` base provider class, and by impl
 export abstract class Provider<T extends ProviderConfig = ProviderConfig> {
   abstract signin<Locals extends Record<string, any> = Record<string, any>, Body = unknown>(
     request: ServerRequest<Locals, Body>,
-  ): EndpointOutput | Promise<EndpointOutput>;
+  ): RequestHandlerOutput | Promise<RequestHandlerOutput>;
 
   abstract callback<Locals extends Record<string, any> = Record<string, any>, Body = unknown>(
     request: ServerRequest<Locals, Body>,

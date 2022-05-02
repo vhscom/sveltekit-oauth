@@ -1,6 +1,6 @@
 import type { GetSession, RequestHandler } from "@sveltejs/kit";
-import type { EndpointOutput } from "@sveltejs/kit/types/endpoint";
-import { RequestEvent } from "@sveltejs/kit/types/hooks";
+import type { RequestHandlerOutput } from "@sveltejs/kit";
+import { RequestEvent } from "@sveltejs/kit/types/private";
 import cookie from "cookie";
 import * as jsonwebtoken from "jsonwebtoken";
 import type { JWT, Session } from "./interfaces";
@@ -112,7 +112,10 @@ export class Auth {
     return redirect;
   }
 
-  async handleProviderCallback(event: RequestEvent, provider: Provider): Promise<EndpointOutput> {
+  async handleProviderCallback(
+    event: RequestEvent,
+    provider: Provider,
+  ): Promise<RequestHandlerOutput> {
     const { headers } = event.request;
     const { url } = event;
     const [profile, redirectUrl] = await provider.callback(event, this);
@@ -136,7 +139,7 @@ export class Auth {
     };
   }
 
-  async handleEndpoint(event: RequestEvent): Promise<EndpointOutput> {
+  async handleEndpoint(event: RequestEvent): Promise<RequestHandlerOutput> {
     const { headers, method } = event.request;
     const { url } = event;
 
