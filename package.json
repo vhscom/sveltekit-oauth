@@ -67,8 +67,5 @@
     "svelte": "^3.48.0",
     "tslib": "^2.4.0",
     "typescript": "^4.6.4"
-  },
-  "peerDependencies": {
-    "@sveltejs/kit": "^1.0.0-next.*"
   }
 }
