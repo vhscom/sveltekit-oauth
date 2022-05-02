@@ -27,6 +27,8 @@
     "changeset": "changeset"
   },
   "keywords": [
+    "svelte",
+    "sveltekit",
     "auth",
     "authentication",
     "csrf",
@@ -35,9 +37,7 @@
     "oauth",
     "oauth2",
     "oidc",
-    "sveltejs",
-    "sveltekit",
-    "sveltekitauth"
+    "rbac"
   ],
   "authors": [
     "VHS <vhsdev@tutanota.como> (https://vhs.codeberg.page)",
@@ -69,15 +69,6 @@
     "typescript": "^4.6.4"
   },
   "peerDependencies": {
-    "@sveltejs/kit": "next",
-    "build-esm": "^4.2.2"
-  },
-  "peerDependenciesMeta": {
-    "@sveltejs/kit": {
-      "optional": true
-    },
-    "build-esm": {
-      "optional": true
-    }
+    "@sveltejs/kit": "^1.0.0-next.*"
   }
 }

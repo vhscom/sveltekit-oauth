@@ -1,31 +1,30 @@
 [![Latest NPM version](https://flat.badgen.net/npm/v/sveltekit-oauth)](https://npmjs.com/sveltekit-oauth)
 [![Total Downloads](https://flat.badgen.net/npm/dt/sveltekit-oauth)](https://npmjs.com/sveltekit-oauth)
 [![Minimum SvelteKit version](https://flat.badgen.net/badge/SvelteKit/>=1.0.0-next.286/ff3e00)](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next286)
-[Type Definitions](https://flat.badgen.net/npm/types/sveltekit-oauth)
+![Type Definitions](https://flat.badgen.net/npm/types/sveltekit-oauth)
 [![MIT licensed](https://flat.badgen.net/npm/license/sveltekit-oauth)](https://codeberg.org/vhs/sveltekit-oauth/src/branch/trunk/LICENSE)
 
 # SvelteKit OAuth
 
 > Based on the original SvelteKitAuth https://github.com/Dan6erbond/sk-auth
 
-
 SvelteKit authentication library with built-in OAuth providers and unrestricted customization.
 
 ## Installation
 
-Install using your preferred package manager
+Install using your preferred package manager:
 
 ```bash
 pnpm add -D sveltekit-oauth # or yarn add, npm install, etc.
 ```
 
-### Usage with Typescript
+### Usage with TypeScript
 
-SvelteKitAuth also comes with first-class support for Typescript out of the box, so no need to add an additional `@types/` dev dependency! 🎉
+SvelteKit OAuth also comes with first-class support for TypeScript out of the box, so no need to add an additional `@types/` dev dependency! 🎉
 
 ## Getting Started
 
-SvelteKitAuth is very easy to setup! All you need to do is instantiate the `SvelteKitAuth` class, and configure it with some default providers, as well as a JWT secret key used to verify the cookies:
+SvelteKit OAuth is very easy to setup! All you need to do is instantiate the `SvelteKitAuth` class, and configure it with some default providers, as well as a JWT secret key used to verify the cookies:
 
 ***Warning**: env variables prefixed with `VITE_` can be exposed and leaked into client-side bundles if they are referenced in any client-side code. Make sure this is not the case, or consider using an alternative method such as loading them via dotenv directly instead.*
 
@@ -60,7 +59,7 @@ export const getSession: GetSession = async (request) => {
 
 ## Callbacks
 
-SvelteKitAuth provides some callbacks, similar to NextAuth.js. Their call signatures are:
+SvelteKit OAuth provides some callbacks, similar to NextAuth.js. Their call signatures are:
 
 ```ts
 interface AuthCallbacks {
@@ -73,7 +72,7 @@ interface AuthCallbacks {
 
 ## Adding more Providers
 
-SvelteKitAuth uses a object-oriented approach towards creating providers. It is unopinionated and allows you to implement any three-legged authentication flow such as OAuth, SAML SSO, and even regular credential logins by omitting the `signin()` route.
+SvelteKit OAuth uses a object-oriented approach towards creating providers. It is unopinionated and allows you to implement any three-legged authentication flow such as OAuth, SAML SSO, and even regular credential logins by omitting the `signin()` route.
 
 You can implement your own using the `Provider` base provider class, and by implementing the `signin()` and `callback()` methods:
 
@@ -136,9 +135,9 @@ The `OAuth2Provider` class can then be instantiated with the configuration to su
 
 ## Motivation
 
-SvelteKitAuth is inspired by the [NextAuth.js](https://next-auth.js.org/) package built for the Next.js SSR framework for React. Unlike NextAuth.js it is completely unopinionated and only provides implementations for default flows, while still empowering users to add their own providers.
+SvelteKit OAuth is inspired by the [NextAuth.js](https://next-auth.js.org/) package built for the Next.js SSR framework for React. Unlike NextAuth.js it is completely unopinionated and only provides implementations for default flows, while still empowering users to add their own providers.
 
-As it leverages classes and Typescript, the implementation of such providers is very straightforward, and in the future it will even be possible to register multiple SvelteKitAuth handlers in the same project, should the need arise, by leveraging a class-based client and server setup.
+As it leverages classes and TypeScript, the implementation of such providers is very straightforward, and in the future it will even be possible to register multiple SvelteKit OAuth handlers in the same project, should the need arise, by leveraging a class-based client and server setup.
 
 ## Examples
 
