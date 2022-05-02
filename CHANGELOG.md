@@ -1,5 +1,11 @@
 # sveltekit-oauth
 
+## 0.1.2
+
+### Patch Changes
+
+- 789c7cf: Remove build-esm peer dependency
+
 ## 0.1.1
 
 ### Patch Changes
