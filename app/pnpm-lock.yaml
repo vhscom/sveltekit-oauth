@@ -20,7 +20,7 @@ specifiers:
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.2.0
   prismjs: ^1.23.0
-  sk-auth: file:../
+  sveltekit-oauth: file:../
   svelte: ^3.34.0
   svelte-preprocess: ^4.7.1
   tailwindcss: ^2.1.1
@@ -33,7 +33,7 @@ dependencies:
   clipboard: 2.0.10
   clsx: 1.1.1
   prismjs: 1.28.0
-  sk-auth: link:..
+  sveltekit-oauth: link:..
 
 devDependencies:
   '@sveltejs/kit': 1.0.0-next.324_svelte@3.48.0

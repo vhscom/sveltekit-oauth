@@ -1,26 +1,22 @@
-![SvelteKitAuth Banner](./res/banner.png)
+[![Latest NPM version](https://flat.badgen.net/npm/v/sveltekit-oauth)](https://npmjs.com/sveltekit-oauth)
+[![Total Downloads](https://flat.badgen.net/npm/dt/sveltekit-oauth)](https://npmjs.com/sveltekit-oauth)
+[![Minimum SvelteKit version](https://flat.badgen.net/badge/SvelteKit/>=1.0.0-next.286/ff3e00)](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next286)
+[Type Definitions](https://flat.badgen.net/npm/types/sveltekit-oauth)
+[![MIT licensed](https://flat.badgen.net/npm/license/sveltekit-oauth)](https://codeberg.org/vhs/sveltekit-oauth/src/branch/trunk/LICENSE)
 
-# SvelteKitAuth
+# SvelteKit OAuth
 
-![License: MIT](https://img.shields.io/github/license/Jenyus-Org/graphql-utils)
-[![NPM Release](https://img.shields.io/npm/v/sk-auth)](https://www.npmjs.com/package/sk-auth)
-[![NPM Downloads](https://img.shields.io/npm/dw/sk-auth)](https://www.npmjs.com/package/sk-auth)
-[![NPM Type Definitions](https://img.shields.io/npm/types/sk-auth)](https://www.npmjs.com/package/sk-auth)
+> Based on the original SvelteKitAuth https://github.com/Dan6erbond/sk-auth
 
-Authentication library for use with SvelteKit featuring built-in OAuth providers and zero restriction customization!
+
+SvelteKit authentication library with built-in OAuth providers and unrestricted customization.
 
 ## Installation
 
-SvelteKitAuth is available on NPM as `sk-auth`, it can be installed with NPM:
+Install using your preferred package manager
 
 ```bash
-npm install -D sk-auth
-```
-
-Or PNPM:
-
-```bash
-pnpm add -D sk-auth
+pnpm add -D sveltekit-oauth # or yarn add, npm install, etc.
 ```
 
 ### Usage with Typescript
@@ -77,7 +73,7 @@ interface AuthCallbacks {
 
 ## Adding more Providers
 
-SvelteKitAuth uses a object-oriented approach towards creating providers. It is unopionated and allows you to implement any three-legged authentication flow such as OAuth, SAML SSO, and even regular credential logins by omitting the `signin()` route.
+SvelteKitAuth uses a object-oriented approach towards creating providers. It is unopinionated and allows you to implement any three-legged authentication flow such as OAuth, SAML SSO, and even regular credential logins by omitting the `signin()` route.
 
 You can implement your own using the `Provider` base provider class, and by implementing the `signin()` and `callback()` methods:
 
@@ -95,7 +91,7 @@ export abstract class Provider<T extends ProviderConfig = ProviderConfig> {
 
 `signin()` must return a generic endpoint output, this can be a redirect, or the path to the provider's sign-in page. When implementing a `HTTP POST` route, `signin()` can simply return an empty body and `callback()` should handle the user login flow.
 
-`callback()` takes a `ServerRequest` and must return a `CallbackResult` which is a custom type exported by `svelte-kit-auth`:
+`callback()` takes a `ServerRequest` and must return a `CallbackResult` which is a custom type exported by `sveltekit-oauth`:
 
 ```ts
 export type Profile = any;
@@ -106,7 +102,7 @@ The first item in the tuple is the user profile, which gets stored in the token,
 
 ### OAuth2
 
-SvelteKitAuth comes with a built-in OAuth2 provider that takes extensive configuration parameters to support almost any common OAuth2 provider which follows the OAuth2 spec. It can be imported from `sk-auth/providers` and configured with the following configuration object:
+SvelteKitAuth comes with a built-in OAuth2 provider that takes extensive configuration parameters to support almost any common OAuth2 provider which follows the OAuth2 spec. It can be imported from `sveltekit-oauth/providers` and configured with the following configuration object:
 
 ```ts
 export interface OAuth2ProviderConfig<ProfileType = any, TokensType extends OAuth2Tokens = any>
@@ -146,12 +142,8 @@ As it leverages classes and Typescript, the implementation of such providers is 
 
 ## Examples
 
-Looking for help? Check out the [example app](./app/) in the repository source. Make something cool you want to show off? Share it with others [in the discussion section](https://github.com/Dan6erbond/sk-auth/discussions/72).
+See the [example app](./app/) in the repository source.
 
-## Contributing
-
-🚧 Work in Progress!
-
-## License
+## Rights
 
 This project is licensed under the terms of the MIT license.
