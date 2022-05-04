@@ -1,5 +1,11 @@
 # sveltekit-oauth
 
+## 0.1.4
+
+### Patch Changes
+
+- 30e6384: Add support for Cloudflare Pages using Functions (Workers) beta
+
 ## 0.1.3
 
 ### Patch Changes
